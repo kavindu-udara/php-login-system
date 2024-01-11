@@ -11,14 +11,13 @@ define('SITE_URL', 'http://localhost/login_system_oop/');
 
 include_once('DatabaseConnection.php');
 $db = new DatabaseConnection;
-include('codes/authentication_code.php');
 
 function base_url($slug){
     echo SITE_URL.$slug;
 }
 
 function redirect($message, $page){
-    $redirectTo = $page;
+    $redirectTo = SITE_URL.$page;
     $_SESSION['message'] = "$message";
     header("Location: $redirectTo");
     exit(0);
