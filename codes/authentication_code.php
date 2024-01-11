@@ -41,7 +41,14 @@ if(isset($_POST['login_btn'])){
 
     $checkLogin = $auth->userLogin($email, $password);
     if($checkLogin){
-        redirect('Logged in success', 'index.php');
+
+        if($_SESSION['auth_role'] == '1'){
+            redirect('Logged in successfully!', 'admin/index.php');
+        }else{
+            redirect('Logged in successfully!', 'index.php');
+        }
+
+        // redirect('Logged in success', 'index.php');
     }else{
         redirect("invalid email or password", 'login.php');
     }

@@ -20,7 +20,7 @@ class LoginController{
 
     private function userAuthentication($data){
         $_SESSION['authenticated'] = true;
-        // $_SESSION['auth_role'] = $data['role_as'];
+        $_SESSION['auth_role'] = $data['role_as'];
         $_SESSION['auth_user'] = [
             'user_id' => $data['id'],
             'user_fname' => $data['fname'],
