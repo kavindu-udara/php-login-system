@@ -32,7 +32,8 @@ include("includes/header.php");
                                 <tr>
                                     <th>ID</th>
                                     <th>Full Name</th>
-                                    <th>Course</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
                                     <th>Edit</th>
                                     <th>Delete</th>
                                 </tr>
@@ -49,8 +50,9 @@ include("includes/header.php");
                                             <td><?= $row['id'] ?></td>
                                             <td><?= $row['fullname'] ?></td>
                                             <td><?= $row['email'] ?></td>
+                                            <td><?= $row['phone'] ?></td>
                                             <td>
-                                                <a href="#" class="btn btn-success">Edit</a>
+                                                <a href="student-edit.php?id=<?= $row['id']; ?>" class="btn btn-success">Edit</a>
                                             </td>
                                             <td>
                                                 <a href="#" class="btn btn-danger">Delete</a>
