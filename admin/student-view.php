@@ -55,7 +55,10 @@ include("includes/header.php");
                                                 <a href="student-edit.php?id=<?= $row['id']; ?>" class="btn btn-success">Edit</a>
                                             </td>
                                             <td>
-                                                <a href="#" class="btn btn-danger">Delete</a>
+                                                <!-- <a href="#" class="btn btn-danger">Delete</a> -->
+                                                <form action="codes/student-code.php" method="POST">
+                                                <button type="submit" value="<?= $row['id'] ?>" name="delete_student" class="btn btn-danger">Delete</button>
+                                                </form>
                                             </td>
                                         </tr>
                                         <?php

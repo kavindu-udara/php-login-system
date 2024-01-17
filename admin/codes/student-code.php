@@ -39,5 +39,16 @@ if(isset($_POST['update_student'])){
     }else{
         redirect('something went wrong', 'admin/student-edit.php');
     }
+}
+
+if(isset($_POST['delete_student'])){
+    $id = validateInput($db->conn, $_POST['delete_student']);
+    $student = new StudentController;
+    $result = $student -> delete($id);
+    if($result){
+        redirect('student deleted successfully', 'admin/student-view.php');
+    }else{
+        redirect('something went wrong', 'admin/student-view.php');
+    }
 
 }
