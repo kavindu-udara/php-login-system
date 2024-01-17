@@ -1,4 +1,4 @@
-# login ad signup page using PHP ( OOP )
+# login and signup page using PHP ( OOP )
 
 ## I used mysql for databases
 
